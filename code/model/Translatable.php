@@ -1800,7 +1800,7 @@ class Translatable extends DataExtension implements PermissionProvider {
 		$parentFilter = null;
 
 		if (Config::inst()->get('SiteTree', 'nested_urls')) {
-			if ($this->owner->ParentID) {
+			if($this->owner->ParentID) {
 				$parentFilter = " AND \"SiteTree\".\"ParentID\" = {$this->owner->ParentID}";
 			} else {
 				$parentFilter = ' AND "SiteTree"."ParentID" = 0';
